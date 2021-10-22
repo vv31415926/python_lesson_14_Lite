@@ -33,35 +33,40 @@ for v1 in div_tags:
 #        pass
 
     #try:
-    tags = v1.find('div', class_='search-item-district living-list-card__inner-block')
+    #tags = v1.find('div', class_='search-item-district living-list-card__inner-block')
+    tags = v1.find('div', class_='search-item-district')
     #print(  tags.text )
     dic['region'] = tags.text
     #except  AttributeError:
     #    pass
 
 #    try:
-    tags = v1.find('div', class_='living-list-card__city-with-estate living-list-card-city-with-estate living-list-card__inner-block')
+    #tags = v1.find('div', class_='living-list-card__city-with-estate living-list-card-city-with-estate living-list-card__inner-block')
+    tags = v1.find('div', class_='living-list-card__city-with-estate')
     #print(tags.text)
     dic['city'] = tags.text
 #    except  AttributeError:
 #        pass
 
 #    try:
-    tags = v1.find('div', class_='living-list-card__area living-list-card-area living-list-card__inner-block')
+    #tags = v1.find('div', class_='living-list-card__area living-list-card-area living-list-card__inner-block')
+    tags = v1.find('div', class_='living-list-card__area')
     #print(tags.text)
     dic['characteristic'] += tags.text
 #    except  AttributeError:
 #        pass
 
     #try:
-    tags = v1.find('div', class_='living-list-card__floor living-list-card-floor living-list-card__inner-block')
+    #tags = v1.find('div', class_='living-list-card__floor living-list-card-floor living-list-card__inner-block')
+    tags = v1.find('div', class_='living-list-card__floor')
     #print(tags.text)
     dic['characteristic'] += " "+tags.text
     #except  AttributeError:
     #    pass
 
 #   try:
-    tags = v1.find('div', class_='living-list-card__material living-list-card-material living-list-card__inner-block')
+    #tags = v1.find('div', class_='living-list-card__material living-list-card-material living-list-card__inner-block')
+    tags = v1.find('div', class_='living-list-card__material')
     #print(tags.text)
     dic['characteristic'] += " " + tags.text
 #    except  AttributeError:
